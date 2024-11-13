@@ -1,16 +1,34 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../components/Home';
-import About from '../components/About';
-import NotFound from '../components/NotFound';
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+import ProductDetails from "../pages/ProductDetails";
+import CategoryPage from "../pages/CategoryPage";
+import Cart from "../pages/Cart";
+import RootLayout from "../layouts/RootLayout";
 
-export default function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductDetails />,
+      },
+      {
+        path: "category/:id",
+        element: <CategoryPage />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      }
+    ],
+    errorElement: <NotFound />,
+  }
+]);
+
