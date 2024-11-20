@@ -5,6 +5,14 @@ import IntegralCF from "../assets/fonts/IntegralCF/Integralcf-bold.ttf";
 import Satoshi from "../assets/fonts/Satoshi/Satoshi-Regular.otf";
 
 export const GlobalStyle = createGlobalStyle`
+/* Estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*Defimos fuentes*/
 @font-face {
     font-family: 'IntegralCF';

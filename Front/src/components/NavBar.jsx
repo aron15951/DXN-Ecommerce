@@ -11,16 +11,16 @@ export default function NavBar() {
       </ContainerIcon>
       <NavList>
         <li>
-          <NavItem href="">Shop</NavItem>
+          <NavItem href="#">Shop</NavItem>
         </li>
         <li>
-          <NavItem href="">On Sale</NavItem>
+          <NavItem href="#">On Sale</NavItem>
         </li>
         <li>
-          <NavItem href="">New Arrivals</NavItem>
+          <NavItem href="#">New Arrivals</NavItem>
         </li>
         <li>
-          <NavItem href="">Brands</NavItem>
+          <NavItem href="#">Brands</NavItem>
         </li>
       </NavList>
       <SearchForm>
@@ -35,7 +35,7 @@ export default function NavBar() {
       </Icons>
     </Container>
   );
-}
+};
 
 // Estilos de los componentes
 const Container = styled.nav`
@@ -43,7 +43,7 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  height: 5rem;
+  height: 4rem;
 `;
 
 const ContainerIcon = styled.div`
@@ -83,6 +83,7 @@ const SearchForm = styled.form`
   align-items: center;
 
   input {
+    width: 20rem;
     padding: 0.5rem 2rem; 
     border: 1px solid #ccc;
     border-radius: 1rem;
@@ -118,3 +119,4 @@ const Icons = styled.div`
     }
   }
 `;
+
